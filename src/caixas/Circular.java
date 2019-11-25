@@ -7,6 +7,7 @@ public class Circular extends Caixa{
 	public Circular(String descUnica, String personalizacao, double raio) {
 		super(descUnica, personalizacao);
 		this.raio = raio;
+		this.formato = "Circular";
 		
 	}
 

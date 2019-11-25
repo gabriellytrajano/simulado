@@ -17,7 +17,6 @@ public class Sistema {
 
 	public Sistema() {
 		this.caixasCadastradas = new HashMap<>();
-		this.pesquisa = new ArrayList<>();
 	}
 
 	public void cadastraCaixaPentagonal(String descUnica, String personalizacao, int lado) {
@@ -43,8 +42,11 @@ public class Sistema {
 	}
 
 	public boolean remover(String descUnica) {
-		this.caixasCadastradas.remove(descUnica);
-		return true;
+		if (caixasCadastradas.containsKey(descUnica)) {
+			this.caixasCadastradas.remove(descUnica);
+			return true;
+		}
+		return false;
 	}
 
 	public boolean contem(String personalizacao, String formato) {
@@ -65,6 +67,7 @@ public class Sistema {
 	}
 
 	public String pesquisa(String personalizacao) {
+		this.pesquisa = new ArrayList<>();
 		for (Caixa caixa : caixasCadastradas.values()) {
 			if (caixa.getPersonalizacao().equalsIgnoreCase(personalizacao)) {
 				pesquisa.add(caixa.getDescUnica());

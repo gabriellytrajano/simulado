@@ -9,6 +9,7 @@ public class Pentagonal extends Caixa{
 		super(descUnica, personalizacao);
 		this.lado = lado;
 		this.altura = calcularAltura(lado);
+		this.formato = "Pentagonal";
 	}
 
 	private double calcularAltura(int altura) {

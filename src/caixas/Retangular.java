@@ -9,6 +9,7 @@ public class Retangular extends Caixa{
 		super(personalizacao, personalizacao);
 		this.lado1 = lado1;
 		this.lado2 = lado2;
+		this.formato = "Retangular";
 	}
 
 	@Override
