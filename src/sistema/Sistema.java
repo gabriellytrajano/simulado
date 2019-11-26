@@ -22,19 +22,16 @@ public class Sistema {
 	public void cadastraCaixaPentagonal(String descUnica, String personalizacao, int lado) {
 		Caixa caixa = new Pentagonal(descUnica, personalizacao, lado);
 		this.caixasCadastradas.put(descUnica, caixa);
-		caixa.setFormato("Pentagonal");
 	}
 
 	public void cadastraCaixaRetangular(String descUnica, String personalizacao, int lado1, int lado2) {
 		Caixa caixa = new Retangular(descUnica, personalizacao, lado1, lado2);
 		this.caixasCadastradas.put(descUnica, caixa);
-		caixa.setFormato("Retangular");
 	}
 
 	public void cadastraCaixaCircular(String descUnica, String personalizacao, int raio) {
 		Caixa caixa = new Circular(descUnica, personalizacao, raio);
 		this.caixasCadastradas.put(descUnica, caixa);
-		caixa.setFormato("Circular");
 	}
 
 	public void modificar(String descUnica, String novaPersonalizacao) {
